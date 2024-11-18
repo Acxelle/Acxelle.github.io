@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="images/logo.jpg" rel="icon" />
+    <title>Inbox - Pixe Meal</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+    />
+    <style>
+      .tab-content {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border: 1px solid #dee2e6;
+        border-top: none;
+      }
+      .message-card,
+      .order-card {
+        background: white;
+        border: 1px solid #e5e5e5;
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+      .message-card:hover,
+      .order-card:hover {
+        background-color: #f1f1f1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="py-3 border-bottom">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-6">
+            <h1 class="h4">Inbox</h1>
+          </div>
+          <div class="col-6 text-end">
+            <a href="index.html" class="btn btn-secondary">Back to Home</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container my-4">
+      <ul class="nav nav-tabs" id="inboxTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="messages-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#messages"
+            type="button"
+            role="tab"
+            aria-controls="messages"
+            aria-selected="true"
+          >
+            Messages
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="orders-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#orders"
+            type="button"
+            role="tab"
+            aria-controls="orders"
+            aria-selected="false"
+          >
+            Orders
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="inboxTabContent">
+        <!-- Messages Tab -->
+        <div
+          class="tab-pane fade show active"
+          id="messages"
+          role="tabpanel"
+          aria-labelledby="messages-tab"
+        >
+          <h5>Your Messages</h5>
+          <div class="message-card">
+            <h6>Shop A</h6>
+            <p>Thank you for your inquiry! Your order is being processed.</p>
+            <span class="text-muted small">Received: 2 hours ago</span>
+          </div>
+          <div class="message-card">
+            <h6>Shop B</h6>
+            <p>Your item is ready for pickup. Please visit the shop.</p>
+            <span class="text-muted small">Received: Yesterday</span>
+          </div>
+        </div>
+
+        <!-- Orders Tab -->
+        <div
+          class="tab-pane fade"
+          id="orders"
+          role="tabpanel"
+          aria-labelledby="orders-tab"
+        >
+          <h5>Your Orders</h5>
+          <div class="order-card">
+            <h6>Order #12345</h6>
+            <p>
+              <strong>Shop Name:</strong> Shop A <br />
+              <strong>Status:</strong> Delivery in Progress
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">View Details</a>
+          </div>
+          <div class="order-card">
+            <h6>Order #12346</h6>
+            <p>
+              <strong>Shop Name:</strong> Shop B <br />
+              <strong>Status:</strong> Delivery Scheduled
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

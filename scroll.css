@@ -1,0 +1,53 @@
+.form-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.form-container::-webkit-scrollbar-thumb {
+  background: #3498db;
+  border-radius: 8px;
+  border: 2px solid #f1f1f1;
+}
+
+.form-container::-webkit-scrollbar-thumb:hover {
+  background: #2980b9;
+}
+
+/* Styling for clickable items (seller/shop) */
+.clickable-item {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.clickable-item:hover {
+  background-color: #ddd;
+}
+
+/* Slide-in effect for the forms */
+#shopForm,
+#sellerForm {
+  position: absolute;
+  top: 0;
+  right: -100%; /* Initially hidden off the screen */
+  width: 95%;
+  transition: right 0.5s ease;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+#shopForm.active,
+#sellerForm.active {
+  right: 0; /* Slide in when active */
+}
+
+/* User type selection */
+.user-type label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
