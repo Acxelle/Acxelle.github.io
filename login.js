@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (userType) {
       if (userType.value === "buyer") {
         // Redirect to the index page for Buyer
-        window.location.href = "index.html";
+        window.location.href = "index1.html";
       } else if (userType.value === "seller") {
         // Redirect to the seller page for Seller
         window.location.href = "seller.html";
